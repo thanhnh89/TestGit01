@@ -33,3 +33,39 @@
 		+ git status
 		+ git status -s  -> hiển thị thông tin dạng rút gọn
 		
+6. git commit
+	- lưu các thay đổi code đã được add trước đó vào local repository, có kèm theo một đoạn mô tả ngắn gọn do người dùng nhập vào
+	- cú pháp: git commit  <các option>
+	- các tham số tùy trọn:
+		+ -m "content message": nội dung ghi chú đính kèm
+		+ -a : tương đương với gọi git add . trươc 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
