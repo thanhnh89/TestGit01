@@ -11,10 +11,25 @@
 
 2. lệnh git branch
 	- kiểm tra các nhánh có trên remote: git branch -a 
-	- kiểm tra các nhánh đang có tại local: git branch
+	- kiểm tra các nhánh đang có tại local: git branch   -> branch hiện tại sẽ hiện dấu *
+	- tạo mới branch: git branch betaTest
+	- 
 	
+
+3. git init
+	- khởi tạo local repository (có thể chưa có remote repository)
+	- hoàn toàn có thể làm việc với dự án mà không có remote repository
 	
-
-
-
-
+4. git add
+	- dùng để đánh dấu các thay đổi trong các file sẽ được commit lên. sau khi chạy git add mà lại có sửa ở file đó thì vẫn phải git add lần nữa để đẩy thêm code mới thay đổi lên.
+	- cú pháp: git add file1 file2 file3  ...
+	- thường chạy "git status" trước để xem danh sách các file có thay đổi
+	- add tất cả: git add .   hoặc git add --all     hoặc git add -A
+	- gọi git add . hoặc git status sẽ không add/hiển thị các file trong danh sách ignore
+	
+5. git status
+	- cho biết các file có thay đổi so với commit cuối, so với code đã add trước đó, đánh dấu ra các file đã add và chưa add
+	- cú pháp:
+		+ git status
+		+ git status -s  -> hiển thị thông tin dạng rút gọn
+		
