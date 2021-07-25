@@ -42,9 +42,15 @@
 		+ --amend: gộp các commit từ lần push trước đến lần commit hiện tại thành 1 commit duy nhất
 
 7. git reset - undo
-	-
+	- khi code đã commit nhưng chưa push lên remote repository thì ta vẫn có thể hủy (undo) commit đó bằng git reset. có 2 loại  git reset khác nhau
+	
+	- git reset --soft HEAD~1: hủy bỏ 1 commit cuối, các thay đổi do commit đó vẫn còn ở trong code nhưng được đưa vào vùng staging để có thể sửa đổi hoặc commit lại.
 
-
+	- git reset --hard HEAD~1: hủy bỏ 1 commit cuối, code sẽ trở lại trạng thái vừa đẩy commit trước của commit bị hủy, mọi thay đổi sau thời điểm đó sẽ mất hết
+	
+	- nếu đã thực hiện 1 lệnh add thì có thể hủy bằng cách:
+		+ git reset: hủy bỏ thao tác add (coi như chưa add, code không thay đổi)
+		+ git reset file1: hủy bỏ thao tác add (coi như chưa add, code không thay đổi) đối với 1 file
 
 
 
