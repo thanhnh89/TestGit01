@@ -38,9 +38,11 @@
 	- cú pháp: git commit  <các option>
 	- các tham số tùy trọn:
 		+ -m "content message": nội dung ghi chú đính kèm
-		+ -a : tương đương với gọi git add . trươc 
+		+ -a : tương đương với gọi git add . trước sau đó mới gọi git commit
+		+ --amend: gộp các commit từ lần push trước đến lần commit hiện tại thành 1 commit duy nhất
 
-
+7. git reset - undo
+	-
 
 
 
