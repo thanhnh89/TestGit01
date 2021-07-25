@@ -1,14 +1,20 @@
-1
-2
-3
-4
-a
-b
-c
-d
-e1
-f1
-g1
+1. lệnh git push
+- đẩy lịch sử commit của nhánh từ local lên server, có thể đẩy 1 nhánh cụ thể hoặc nhiều nhánh
+- ví dụ: git push origin beta
+	-> push nhánh beta lên remote repository
+	+ origin là tên mặc định của remote repository 
+	
+- các tham số:
+	+ đẩy tất cả các nhánh: git push origin --all
+	+ xóa 1 nhánh: git push origin --delete beta
+	+ ghi đè nhánh(cẩn thận) : git push --force origin beta 
+
+2. lệnh git branch
+	- kiểm tra các nhánh có trên remote: git branch -a 
+	- kiểm tra các nhánh đang có tại local: git branch
+	
+	
+
 
 
 
