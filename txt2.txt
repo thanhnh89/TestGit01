@@ -1,14 +1,20 @@
 1. lệnh git push
 - đẩy lịch sử commit của nhánh từ local lên server, có thể đẩy 1 nhánh cụ thể hoặc nhiều nhánh
+- Nếu là lần đầu tiên đẩy Local Repo lên Remote Repo mới khởi tạo thì cần tạo ra một theo dõi kết nối, upstream giữa local và remote, vậy hãy dùng tham số -u. Ví dụ đẩy lên remote có tên origin và tạo upstream cho nhánh master
+	git push -u origin master
+
+
 - ví dụ: git push origin beta
 	-> push nhánh beta lên remote repository
 	+ origin là tên mặc định của remote repository 
 	
 - các tham số:
-	+ đẩy tất cả các nhánh: git push origin --all
-	+ xóa 1 nhánh: git push origin --delete beta
-	+ ghi đè nhánh(cẩn thận) : git push --force origin beta 
+	--all: đẩy tất cả các nhánh: git push origin 
+	--delete: xóa 1 nhánh trên server : git push origin --delete beta
+	--force: ghi đè nhánh(cẩn thận) : git push --force origin beta 
 
+- viết "git push " tương đương với "git push origin master"
+	
 2. lệnh git branch
 	- kiểm tra các nhánh có trên remote: git branch -a 
 	- kiểm tra các nhánh đang có tại local: git branch   -> branch hiện tại sẽ hiện dấu *
@@ -52,10 +58,32 @@
 		+ git reset: hủy bỏ thao tác add (coi như chưa add, code không thay đổi)
 		+ git reset file1: hủy bỏ thao tác add (coi như chưa add, code không thay đổi) đối với 1 file
 
-
-
-
-
+8. git log
+ - xem lại lịch sử các commit
+ - Một số phím chức năng bạn có thể nhập đề điều hướng và tìm kiếm trong log như:
+	+ return - dòng tiếp theo
+	+ w - trang tiếp
+	+ spacebar - trang trước
+	+ q - thoát
+	+ ?pattern - tìm kiếm, với pattern là mẫu tìm kiếm (keyword)
+	+ /pattern - giống ?pattern
+	+ n - đến vị trí tìm kiếm phía dưới
+	+ N - đến kết quả tìm kiếm phía trước
+	
+  - Một số cách dùng:
+	+ git log -2: chỉ hiển thị log của 2 commit cuối
+	+ git log -p -2: chỉ hiển thị log của 2 commit cuối, hiển thị thêm các chi tiết thay đổi
+	+ git log --stat -5: hiển thị dạng thu gọn bằng --stat hoặc --shortstat
+	+ git log --oneline hiển thị vắn tắt mỗi commit trên 1 dòng 
+	+ Lọc theo ngày bạn có thể dùng tham số --after="year-month-day" hoặc --before="year-month-day" hoặc dùng cả hai 
+	+ Lọc theo người commit dùng tham số --author="tác giả"
+	+ Lọc theo thông tin ghi chú về commit sử dụng thiết lập --grep="keyword ..."
+	+ Lọc các commit liên quan đến file cụ thể, sử dụng thiết lập -- rồi liệt kê các file, ví dụ:
+		git log --oneline -- src/OAuth.php
+	+ Lọc theo nội dung cập nhật sử dụng tham số -S"nội dung tìm"
+	+ Lọc các commit bình thường (tham số --no-merges) và các commit do gộp nhánh (tham số --merges)
+	
+9. 
 
 
 
