@@ -5,10 +5,12 @@
 	+ origin là tên mặc định của remote repository 
 	
 - các tham số:
-	+ đẩy tất cả các nhánh: git push origin --all
-	+ xóa 1 nhánh: git push origin --delete beta
-	+ ghi đè nhánh(cẩn thận) : git push --force origin beta 
+	--all: đẩy tất cả các nhánh: git push origin 
+	--delete: xóa 1 nhánh trên server : git push origin --delete beta
+	--force: ghi đè nhánh(cẩn thận) : git push --force origin beta 
 
+- viết "git push " tương đương với "git push origin master"
+	
 2. lệnh git branch
 	- kiểm tra các nhánh có trên remote: git branch -a 
 	- kiểm tra các nhánh đang có tại local: git branch   -> branch hiện tại sẽ hiện dấu *
