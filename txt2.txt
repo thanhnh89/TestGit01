@@ -58,7 +58,8 @@
 		+ git reset: hủy bỏ thao tác add (coi như chưa add, code không thay đổi)
 		+ git reset file1: hủy bỏ thao tác add (coi như chưa add, code không thay đổi) đối với 1 file
 
-8. fddf 
+8. git log
+ 
 
 
 
