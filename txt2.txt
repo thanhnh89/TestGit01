@@ -59,10 +59,31 @@
 		+ git reset file1: hủy bỏ thao tác add (coi như chưa add, code không thay đổi) đối với 1 file
 
 8. git log
- 
-
-
-
+ - xem lại lịch sử các commit
+ - Một số phím chức năng bạn có thể nhập đề điều hướng và tìm kiếm trong log như:
+	+ return - dòng tiếp theo
+	+ w - trang tiếp
+	+ spacebar - trang trước
+	+ q - thoát
+	+ ?pattern - tìm kiếm, với pattern là mẫu tìm kiếm (keyword)
+	+ /pattern - giống ?pattern
+	+ n - đến vị trí tìm kiếm phía dưới
+	+ N - đến kết quả tìm kiếm phía trước
+	
+  - Một số cách dùng:
+	+ git log -2: chỉ hiển thị log của 2 commit cuối
+	+ git log -p -2: chỉ hiển thị log của 2 commit cuối, hiển thị thêm các chi tiết thay đổi
+	+ git log --stat -5: hiển thị dạng thu gọn bằng --stat hoặc --shortstat
+	+ git log --oneline hiển thị vắn tắt mỗi commit trên 1 dòng 
+	+ Lọc theo ngày bạn có thể dùng tham số --after="year-month-day" hoặc --before="year-month-day" hoặc dùng cả hai 
+	+ Lọc theo người commit dùng tham số --author="tác giả"
+	+ Lọc theo thông tin ghi chú về commit sử dụng thiết lập --grep="keyword ..."
+	+ Lọc các commit liên quan đến file cụ thể, sử dụng thiết lập -- rồi liệt kê các file, ví dụ:
+		git log --oneline -- src/OAuth.php
+	+ Lọc theo nội dung cập nhật sử dụng tham số -S"nội dung tìm"
+	+ Lọc các commit bình thường (tham số --no-merges) và các commit do gộp nhánh (tham số --merges)
+	
+9. 
 
 
 
