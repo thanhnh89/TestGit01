@@ -19,7 +19,7 @@
 	- kiểm tra các nhánh có trên remote: git branch -a 
 	- kiểm tra các nhánh đang có tại local: git branch   -> branch hiện tại sẽ hiện dấu *
 	- tạo mới branch: git branch betaTest
-	- 
+	- xem các nhánh ở remote: git branch --remote
 	
 
 3. git init
@@ -82,11 +82,35 @@
 		git log --oneline -- src/OAuth.php
 	+ Lọc theo nội dung cập nhật sử dụng tham số -S"nội dung tìm"
 	+ Lọc các commit bình thường (tham số --no-merges) và các commit do gộp nhánh (tham số --merges)
+	+ hiển thị dạng đồ thị cây: --graph
 	
-9. 
-
-
-
+9. git diff
+	- git diff hiển thị thông tin thay đổi giữa code hiện tại và code trong index hoặc commit trước đó, giữa 2 nhánh ....
+	- trường hợp default: git diff 
+	- kiểm tra sự thay đổi của index và commit cuối: git diff -staged 
+	- kiểm tra sự thay đổi giữa 2 commit: git diff hash1 hash2  (hash1, hash2 là hash của 2 commit cần so sánh)
+	- kiểm tra sự thay đổi giữa 2 nhánh: git dif branch1 branch2
+	
+10. git clone
+	- git clone <link remote repository>
+	- sau khi tạo sẽ tự động kết nối với remote repository (và đặt repository có tên là origin), có thể kiểm tra bằng lệnh : 
+		+ git remote -v 
+	
+	- có thể chỉ định thư mục sẽ copy về khác thư mục hiện tại như sau: git clone path-git path-des
+	
+11. git checkout 
+	- Lệnh git checkout được dùng để chuyển nhánh hoặc để phục hồi file trong thư mục làm việc từ một commit trước đâ
+	- Từ phiên bản git 2.23 còn có thể 2 lệnh với chức năng tương ứng là: git switch và git restore
+	- cách sử dụng: 
+		+ git checkout <tên nhánh>  (nếu muốn chuyển đến nhánh trên remote cần thêm chữ origin)
+		+ git checkout HASH index.html: phục hồi file index.html về trạng thái của commit có mã hash 
+		+ git checkout index.html: phục hồi lại trạng thái file index.html thep trạng thái trong index
+		+ git checkout -- *.html : phục hồi nhiều file 
+		+ git checkout -- .: phục hồi tất cả các file
+		+ git checkout HASH : trở về 1 commit nào đó
+		
+	
+	
 
 
 
