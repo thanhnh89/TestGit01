@@ -1,5 +1,9 @@
 1. lệnh git push
 - đẩy lịch sử commit của nhánh từ local lên server, có thể đẩy 1 nhánh cụ thể hoặc nhiều nhánh
+- Nếu là lần đầu tiên đẩy Local Repo lên Remote Repo mới khởi tạo thì cần tạo ra một theo dõi kết nối, upstream giữa local và remote, vậy hãy dùng tham số -u. Ví dụ đẩy lên remote có tên origin và tạo upstream cho nhánh master
+	git push -u origin master
+
+
 - ví dụ: git push origin beta
 	-> push nhánh beta lên remote repository
 	+ origin là tên mặc định của remote repository 
